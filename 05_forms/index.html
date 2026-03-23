@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+
+<body>
+    <form action="/login" method="post">
+        <fieldset disabled>
+            <label for="usernameID">Username</label>
+            <input type="text" name="username" id="usernameID">
+            <label for="passwordID">Password</label>
+            <input type="password" name="password" id="passwordID">
+            <button>Login</button>
+        </fieldset>
+
+    </form>
+
+    <form>
+        <fieldset>
+            <label>Gender</label>
+            <label for="male">M</label>
+            <input type="radio" name="gender" id="male">
+            <label for="female">F</label>
+            <input type="radio" name="gender" id="female">
+            <label for="other">Other</label>
+            <input type="radio" name="gender" id="other">
+            <br>
+            <label for="dobID">DOB</label>
+            <input type="date" name="dob" id="dobID">
+            <br>
+            <label for="newsLetterID">Sign up for our newsletter?</label>
+            <input type="checkbox" name="signUp" id="newsLetterID">
+            <br>
+            <select name="country" id="countryID" required>
+                <option value="">Please select from the list</option>
+                <option value="uk">United Kingdom</option>
+                <option value="us">United States</option>
+                <option value="fr">France</option>
+            </select>
+            <br>
+            <label for="copiesId">How many copies?</label>
+            <input type="number" name="copies" id="copiesId" min="1" max="100">
+            <br>
+            <br>
+
+            <label for="telID">Tel</label>
+            <input type="tel" name="tel" id="telID" required>
+            <br>
+            <label for="emailID">Email</label>
+            <input type="text" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" name="email" id="emailID" required placeholder="Type email here">
+            <button>Submit</button>
+        </fieldset>
+    </form>
+
+    <section>
+        <h2>Create Trainer</h2>
+        <form action="/create" method="post">
+            <label for="trainerName">Name</label>
+            <input type="text" name="name" id="trainerName">
+            <label for="trainerAge">Age</label>
+            <input type="number" name="age" id="trainerAge" min="21" max="100">
+            <label for="trainerSpecialism">Specialism</label>
+            <input type="text" name="specialism" id="trainerSpecialism">
+            <button>Submit</button>
+        </form>
+    </section>
+
+    
+    <section>
+        <h2>Update Trainer</h2>
+        <form action="/update" method="post">
+            <label for="updateTrainerName">Name</label>
+            <input type="text" name="name" id="updateTrainerName">
+            <label for="updateTrainerAge">Age</label>
+            <input type="number" name="age" id="updateTrainerAge" min="21" max="100">
+            <label for="updateTrainerSpecialism">Specialism</label>
+            <input type="text" name="specialism" id="updateTrainerSpecialism">
+            <button>Submit</button>
+        </form>
+    </section>
+</body>
+
+</html>
