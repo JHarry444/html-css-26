@@ -31,39 +31,79 @@
             background-color: orange;
         }
 
-      #lists {
-        color: blue;
-      }
+        #lists {
+            color: blue;
+        }
 
-      ol li {
+        ol li {
+            color: red;
+        }
+
+        ul li {
+            color: orange;
+        }
+
+        li {
+            color: green;
+        }
+
+        /* any p anywhere inside a div */
+        /* children, grandchildren, great-grandchildren, etc */
+        div p {
+            color: blue;
+        }
+
+        /* only looks at the elements children */
+        div>p {
+            color: red;
+        }
+
+        /* every sibling */
+        /* .linksNextToHeading, h2~a {
         color: red;
-      }
-
-      ul li {
-        color: orange;
-      }
-
-      li {
-        color: green;
-      }
-
-      /* any p anywhere inside a div */
-      /* children, grandchildren, great-grandchildren, etc */
-      div p {
+      } */
+        /* next sibling */
+        /* h2+a {
         color: blue;
-      }
-      /* only looks at the elements children */
-      div > p {
-        color: red;
-      }
-      /* every sibling */
-      .linksNextToHeading, h2~a {
-        color: red;
-      }
-      /* next sibling */
-      h2+a {
-        color: blue;
-      }
+      } */
+
+        a:hover {
+            color: orange;
+        }
+
+        a:visited {
+            color: pink;
+        }
+
+        li:first-child {
+            color: green;
+        }
+
+        li:last-child {
+            color: green;
+        }
+
+        li:nth-child(even) {
+            color: purple;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        table,
+        td,
+        th {
+            border: 1px solid black;
+        }
+
+        tbody > tr:nth-child(odd) {
+            background-color: grey;
+        }
+
+        p:last-of-type {
+            color: peru;
+        }
     </style>
 </head>
 
@@ -131,6 +171,39 @@
     <p> First paragraph with <strong>bold</strong> or <em>italicised</em> text</p>
     <p> First paragraph with <strong>bold</strong> or <em>italicised</em> text</p>
     <p> First paragraph with <strong>bold</strong> or <em>italicised</em> text</p>
+
+    <section>
+        <table>
+            <caption>Trainers</caption>
+            <thead>
+                <tr>
+                    <th> Name </th>
+                    <th> Age</th>
+                    <th>Specialism </th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td>JH</td>
+                    <td>32</td>
+                    <td>Java</td>
+                </tr>
+                <tr>
+                    <td>CG</td>
+                    <td>33</td>
+                    <td>Web</td>
+                </tr>
+                <tr>
+                    <td>MS</td>
+                    <td>45</td>
+                    <td>Oracle</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </section>
+
 </body>
 
 </html>
