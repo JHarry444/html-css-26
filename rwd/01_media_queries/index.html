@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        body {
+            background-color: red;
+        }
+
+        @media (min-width: 400px) {
+            body {
+                background-color: orange;
+            }
+        }
+
+        @media (min-width: 800px) {
+            body {
+                background-color: green;
+            }
+        }
+
+        img {
+            max-width: 24%;
+        }
+
+        @media (max-width: 900px) {
+            img {
+                max-width: 32%;
+            }
+        }
+
+        @media (max-width: 700px) {
+            img {
+                max-width: 49%;
+            }
+        }
+
+        @media (max-width: 500px) {
+            img {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="./me.jpg" alt="me1">
+        <img src="./me.jpg" alt="me2">
+        <img src="./me.jpg" alt="me3">
+        <img src="./me.jpg" alt="me4">
+    </div>
+    <div>
+        <img src="./me.jpg" alt="me5">
+        <img src="./me.jpg" alt="me6">
+        <img src="./me.jpg" alt="me7">
+        <img src="./me.jpg" alt="me8">
+
+    </div>
+</body>
+
+</html>
